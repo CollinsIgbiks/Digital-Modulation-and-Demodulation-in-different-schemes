@@ -1,3 +1,4 @@
+//change data types
 int modulate_bpsk(int* signal){
     for(int i = 0; i <= sizeof(signal) - 1; i++){
         if(signal[i] == 0){
