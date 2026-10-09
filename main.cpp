@@ -93,7 +93,7 @@ int main(){
                   1, bits, 0.0, 12.0, snr_step_db);
     run_ber_sweep("qpsk", modulate_qpsk, demodulate_qpsk, theoretical_ber_bpsk_qpsk,
                   1, bits, 0.0, 12.0, snr_step_db);
-    // 16-QAM needs about 6.5 dB more SNR for the same BER, so sweep further.
+    // 16-QAM needs roughly 7 dB more SNR for the same BER, so sweep further.
     run_ber_sweep("16qam", modulate_16QAM, demodulate_16QAM, theoretical_ber_16qam,
                   2, bits, 0.0, 18.0, snr_step_db);
     return 0;
