@@ -4,7 +4,9 @@
 #include <limits>
 
 void add_noise(const double* symbols, double* noisy_symbols, int length, double snr_db){
-    // Average signal power (assumes real-valued symbols, e.g. BPSK's +-1).
+    // Average power per stored double. Works for real symbols (BPSK) and
+    // for interleaved I/Q (QPSK): noise of this variance is added to each
+    // of I and Q independently, as complex AWGN requires.
     double signal_power = 0.0;
     for(int i = 0; i < length; i++){
         signal_power += symbols[i] * symbols[i];

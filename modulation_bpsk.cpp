@@ -1,3 +1,5 @@
+#include "modulation.hpp"
+
 // bits and symbols are separate buffers so the original bit sequence
 // survives modulation/noise/demodulation for later BER comparison.
 // symbols are double so noise (in utils.cpp) can add continuous-valued

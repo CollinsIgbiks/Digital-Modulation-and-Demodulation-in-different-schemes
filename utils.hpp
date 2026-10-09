@@ -1,3 +1,6 @@
+#ifndef UTILS_HPP
+#define UTILS_HPP
+
 // Noise addition, SNR, and BER calculations shared across modulation schemes.
 
 // Adds AWGN (additive white Gaussian noise) to a modulated symbol stream.
@@ -13,3 +16,5 @@ double calculate_snr(const double* symbols, const double* noisy_symbols, int len
 // Computes the bit error rate: the fraction of mismatched bits between
 // the originally transmitted bits and the recovered (demodulated) bits.
 double calculate_ber(const int* original_bits, const int* recovered_bits, int length);
+
+#endif
